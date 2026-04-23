@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+
+/* ─── Sidebar Wrapper ─── */
+.widgets {
+  width: 340px;
+  min-width: 300px;
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--sparrow-bg);
+  border-left: 1px solid var(--sparrow-light);
+
+  /* ── Sticky on right ── */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-self: flex-start;
+  margin-left: auto;
+
+  /* ── Hide scrollbar ── */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.widgets::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Fade-in on load ─── */
+.widgets__search {
+  animation: widgetFadeUp 0.35s ease both;
+  animation-delay: 0.05s;
+}
+
+.widgets__card:nth-child(2) {
+  animation: widgetFadeUp 0.35s ease both;
+  animation-delay: 0.13s;
+}
+
+.widgets__card:nth-child(3) {
+  animation: widgetFadeUp 0.35s ease both;
+  animation-delay: 0.22s;
+}
+
+@keyframes widgetFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ─── Search Bar ─── */
+.widgets__search {
+  display: flex;
+  align-items: center;
+  background-color: var(--sparrow-white);
+  border: 1.5px solid var(--sparrow-light);
+  border-radius: 50px;
+  padding: 10px 16px;
+  gap: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.widgets__search:focus-within {
+  border-color: var(--sparrow-mid);
+  box-shadow: 0 0 0 3px rgba(74,74,74,0.07);
+}
+
+.widgets__searchIcon {
+  color: var(--sparrow-gray) !important;
+  font-size: 18px !important;
+}
+
+.widgets__searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--sparrow-dark);
+  width: 100%;
+}
+
+.widgets__searchInput::placeholder { color: #b0b0b0; }
+
+/* ─── Card ─── */
+.widgets__card {
+  background-color: var(--sparrow-white);
+  border: 1px solid var(--sparrow-light);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.widgets__cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--sparrow-light);
+}
+
+.widgets__cardHeader h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--w-dark);
+  margin: 0;
+}
+
+.widgets__cardIcon {
+  color: var(--w-mid) !important;
+  font-size: 18px !important;
+}
+
+/* ─── Trending ─── */
+.widgets__trendList { display: flex; flex-direction: column; }
+
+.widgets__trendItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--sparrow-light);
+  transition: background-color 0.15s ease, padding-left 0.18s ease;
+}
+
+.widgets__trendItem:last-child { border-bottom: none; }
+
+.widgets__trendItem:hover {
+  background-color: var(--sparrow-hover);
+  padding-left: 20px;
+}
+
+.widgets__trendMeta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.widgets__trendCategory {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--w-gray);
+}
+
+.widgets__trendPosts {
+  font-size: 11px;
+  color: var(--w-gray);
+}
+
+.widgets__trendTag {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sparrow-dark);
+}
+
+/* ─── Who to Follow ─── */
+.widgets__followList { display: flex; flex-direction: column; }
+
+.widgets__followItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--sparrow-light);
+  transition: background-color 0.15s ease;
+}
+
+.widgets__followItem:last-child { border-bottom: none; }
+.widgets__followItem:hover { background-color: var(--sparrow-hover); }
+
+.widgets__followAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--w-dark);
+  color: var(--w-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 15px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.widgets__followItem:hover .widgets__followAvatar {
+  transform: scale(1.08);
+}
+
+.widgets__followInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.widgets__followName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sparrow-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.widgets__followHandle {
+  font-size: 12px;
+  color: var(--sparrow-gray);
+}
+
+.widgets__followBtn {
+  padding: 7px 14px;
+  border-radius: 50px;
+  border: 1.5px solid var(--sparrow-dark);
+  background-color: transparent;
+  color: var(--sparrow-dark);
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.widgets__followBtn:hover {
+  background-color: var(--sparrow-dark);
+  color: var(--sparrow-white);
+  transform: scale(1.04);
+}
+
+.widgets__followBtn.following {
+  background-color: var(--sparrow-dark);
+  color: var(--sparrow-white);
+}
+
+.widgets__followBtn.following:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+
+/* ─── Show More ─── */
+.widgets__showMore {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--sparrow-mid);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.15s ease, padding-left 0.18s ease;
+}
+
+.widgets__showMore:hover {
+  background-color: var(--sparrow-hover);
+  padding-left: 20px;
+}
+
+/* ─── Footer ─── */
+.widgets__footer {
+  font-size: 11px;
+  color: #bbb;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* ─── Responsive ─── */
+@media screen and (max-width: 1100px) {
+  .widgets { width: 280px; min-width: 260px; }
+}
+
+@media screen and (max-width: 900px) {
+  .widgets { display: none; }
+}

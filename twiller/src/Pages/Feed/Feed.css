@@ -1,0 +1,128 @@
+.feed {
+  flex: 0.45; /* thoda wide for better balance */
+  border-right: 1px solid var(--sparrow-background);
+  min-width: 380px;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+
+  /* ✨ subtle depth */
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
+}
+
+/* 🔥 Smooth scrollbar */
+.feed::-webkit-scrollbar {
+  width: 6px;
+}
+
+.feed::-webkit-scrollbar-thumb {
+  background-color: #d1d9de;
+  border-radius: 10px;
+}
+
+.feed::-webkit-scrollbar-thumb:hover {
+  background-color: #aab8c2;
+}
+
+/* HEADER */
+.feed__header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #eff3f4;
+
+  /* ✨ slight shadow for separation */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* HEADER TEXT */
+.feed__header > h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+/* 🧠 POST AREA IMPROVEMENT */
+.feed .tweetBox {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.feed .tweetBox input {
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+/* ✨ POST CARD LOOK */
+.feed > div {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eff3f4;
+  transition: all 0.2s ease;
+}
+
+/* 🔥 HOVER EFFECT (Twitter feel) */
+.feed > div:hover {
+  background-color: #f7f9f9;
+  cursor: pointer;
+}
+
+/* 💎 Slight active click feel */
+.feed > div:active {
+  background-color: #eef1f2;
+}
+
+/* ✨ Avatar + spacing improvement (if using flex row) */
+.feed .post {
+  display: flex;
+  gap: 12px;
+}
+
+/* ✨ Username + handle */
+.feed .post__headerText h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.feed .post__headerText span {
+  font-size: 13px;
+  color: #536471;
+}
+
+/* ✨ Tweet text */
+.feed .post__description {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ✨ Icons row */
+.feed .post__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  max-width: 350px;
+}
+
+.feed .post__footer svg {
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.feed .post__footer svg:hover {
+  background: rgba(29, 155, 240, 0.1);
+  color: #1d9bf0;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .feed {
+    flex: 1;
+    min-width: 100%;
+  }
+}

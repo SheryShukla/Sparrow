@@ -1,0 +1,61 @@
+.explore {
+  flex: 0.4;
+  padding: 20px;
+}
+
+/* Title */
+.explore h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+/* Search */
+.explore__search {
+  margin-bottom: 20px;
+}
+
+.explore__search input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #e6ecf0;
+  background: #f5f8fa;
+  outline: none;
+}
+
+/* Trends */
+.explore__trends {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Trend Card */
+.trend {
+  padding: 12px;
+  border-radius: 12px;
+  background: #f7f9f9;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.trend:hover {
+  background: #eef1f2;
+}
+
+/* Text styles */
+.trend__category {
+  font-size: 12px;
+  color: #536471;
+}
+
+.trend h4 {
+  font-size: 15px;
+  margin: 2px 0;
+}
+
+.trend__tweets {
+  font-size: 12px;
+  color: #536471;
+}
