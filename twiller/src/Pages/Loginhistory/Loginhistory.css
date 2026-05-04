@@ -1,0 +1,167 @@
+.login-history {
+  flex: 0.45;
+  min-width: 380px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+  border-right: 1px solid #eff3f4;
+}
+
+.login-history::-webkit-scrollbar { width: 6px; }
+.login-history::-webkit-scrollbar-thumb { background: #d1d9de; border-radius: 10px; }
+
+/* ── Header ── */
+.login-history__header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #eff3f4;
+}
+
+.login-history__back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  color: #0f1419;
+  transition: background 0.2s;
+}
+
+.login-history__back:hover { background: #f7f9fa; }
+
+.login-history__header h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  color: #0f1419;
+}
+
+.login-history__header p {
+  font-size: 13px;
+  color: #536471;
+  margin: 0;
+}
+
+/* ── Loading / Empty ── */
+.login-history__loading,
+.login-history__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: #536471;
+}
+
+.login-history__empty h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f1419;
+  margin-bottom: 8px;
+}
+
+/* ── Table wrapper ── */
+.login-history__table-wrap {
+  padding: 16px;
+  overflow-x: auto;
+}
+
+/* ── Table ── */
+.login-history__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 560px;
+}
+
+.login-history__table thead tr {
+  background: #f7f9fa;
+  border-bottom: 2px solid #eff3f4;
+}
+
+.login-history__table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #536471;
+  white-space: nowrap;
+}
+
+.login-history__table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eff3f4;
+  color: #0f1419;
+  vertical-align: middle;
+}
+
+.login-history__table tbody tr:hover {
+  background: #f7f9fa;
+}
+
+/* ── Latest row ── */
+.lh-row--latest td {
+  background: #fffbea;
+}
+
+.lh-row--latest:hover td {
+  background: #fff8d6;
+}
+
+/* ── Cells ── */
+.lh-num {
+  color: #536471 !important;
+  font-size: 12px;
+  width: 32px;
+}
+
+.lh-date { white-space: nowrap; font-size: 13px; color: #536471 !important; }
+
+.lh-browser {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.lh-emoji { font-size: 16px; }
+
+.lh-badge {
+  background: #1d9bf0;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lh-device {
+  display: flex;
+  align-items: center;
+  color: #536471 !important;
+}
+
+.lh-ip code {
+  background: #f7f9fa;
+  border: 1px solid #eff3f4;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  color: #536471;
+}

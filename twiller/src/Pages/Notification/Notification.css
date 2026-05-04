@@ -1,0 +1,47 @@
+.notifications {
+  flex: 0.4;
+  padding: 20px;
+}
+
+/* Title */
+.notifications h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+/* List */
+.notifications__list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card */
+.notification {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #eff3f4;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.notification:hover {
+  background: #f7f9f9;
+}
+
+/* Icon */
+.notification__icon {
+  font-size: 20px;
+}
+
+/* Content */
+.notification__content p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.notification__content span {
+  font-size: 12px;
+  color: #536471;
+}

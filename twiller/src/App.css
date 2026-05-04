@@ -1,0 +1,29 @@
+:root {
+  --sparrow-dark:  #0f172a;
+  --sparrow-mid: #334155;      
+  --sparrow-gray: #64748b;
+  --sparrow-light: #e2e8f0;
+  --sparrow-bg: #f8fafc;
+  --sparrow-white: #ffffff;
+  --sparrow-accent: #3b82f6;
+  --sparrow-panel: #f1f5f9;  
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  /* max-width: 1300px; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  border-right: 1px solid var(--sparrow-accent);
+  width: 100vw;
+  overflow: hidden;
+   align-items: flex-start;
+}
+
+@media screen and (max-width:688px) {
+  .app {
+    display: block;
+  }
+}

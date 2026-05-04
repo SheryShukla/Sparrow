@@ -1,0 +1,62 @@
+.sidebarOptions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  color: #2a2a2a;
+}
+
+.sidebarOptions:hover {
+  background-color: #ebebea;
+}
+
+/* Active state — set via Customlink when route matches */
+.sidebarOptions--active {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.sidebarOptions--active .sidebarOption__icon {
+  stroke-width: 2.5;
+}
+
+.sidebarOption__icon {
+  font-size: 24px !important;
+  padding: 0 12px 0 0;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.sidebarOptions > h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  color: inherit;
+}
+
+.sidebarOptions--active > h2 {
+  font-weight: 700;
+}
+
+/* ─── Responsive: icon-only mode ─── */
+@media screen and (max-width: 1100px) {
+  .sidebarOptions > h2 {
+    display: none;
+  }
+
+  .sidebarOption__icon {
+    padding: 0;
+  }
+
+  .sidebarOptions {
+    justify-content: center;
+    padding: 10px;
+    width: 46px;
+    height: 46px;
+  }
+}

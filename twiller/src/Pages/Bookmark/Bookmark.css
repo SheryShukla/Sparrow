@@ -1,0 +1,145 @@
+.bookmarks {
+  flex: 0.45;
+  border-right: 1px solid #eff3f4;
+  min-width: 380px;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.bookmarks::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bookmarks::-webkit-scrollbar-thumb {
+  background-color: #d1d9de;
+  border-radius: 10px;
+}
+
+/* ── HEADER ── */
+.bookmarks__header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #eff3f4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.bookmarks__header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.bookmarks__header p {
+  font-size: 13px;
+  color: #536471;
+  margin: 2px 0 0 0;
+}
+
+/* ── CLEAR BUTTON ── */
+.bookmarks__clearBtn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 1px solid #cfd9de;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #536471;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bookmarks__clearBtn:hover {
+  background-color: rgba(244, 33, 46, 0.08);
+  border-color: #f4212e;
+  color: #f4212e;
+}
+
+/* ── EMPTY STATE ── */
+.bookmarks__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  text-align: center;
+  color: #536471;
+}
+
+.bookmarks__empty__icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.bookmarks__empty h3 {
+  font-size: 23px;
+  font-weight: 800;
+  color: #0f1419;
+  margin: 0 0 8px 0;
+}
+
+.bookmarks__empty p {
+  font-size: 15px;
+  color: #536471;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── POST CARD (extends existing .post style) ── */
+.bookmarks .post {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #eff3f4;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.bookmarks .post:hover {
+  background-color: #f7f9f9;
+  cursor: pointer;
+}
+
+/* ── BOOKMARK ICON (inside post footer) ── */
+.post__bookmarkBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #536471;
+  transition: all 0.2s ease;
+}
+
+.post__bookmarkBtn:hover {
+  background: rgba(29, 155, 240, 0.1);
+  color: #1d9bf0;
+}
+
+.post__bookmarkBtn.bookmarked {
+  color: #1d9bf0;
+}
+
+/* ── LOADING ── */
+.bookmarks__loading {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  color: #536471;
+  font-size: 15px;
+}

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+twiller/node_modules/
+server/node_modules/
+
+# Build
+twiller/build/
+
+# Environment
+.env
+*.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
